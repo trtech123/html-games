@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flappy AI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="header">
+            <h1>Flappy AI</h1>
+            <div class="theme-selector">
+                <button id="theme1" class="theme-btn active">Classic</button>
+                <button id="theme2" class="theme-btn">Night</button>
+                <button id="theme3" class="theme-btn">Space</button>
+            </div>
+        </div>
+        
+        <canvas id="gameCanvas" width="400" height="600"></canvas>
+        
+        <div class="game-info">
+            <div class="score-container">
+                <p>Score: <span id="score">0</span></p>
+                <p>High Score: <span id="highScore">0</span></p>
+            </div>
+            <div class="difficulty">
+                <p>Difficulty: <span id="difficulty">Normal</span></p>
+            </div>
+        </div>
+
+        <div class="controls">
+            <button id="startButton">Start Game</button>
+            <p class="instructions">Press SPACE or click to flap</p>
+        </div>
+
+        <div class="leaderboard">
+            <h2>Leaderboard</h2>
+            <div id="leaderboardList"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 

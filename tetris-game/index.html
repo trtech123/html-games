@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tetris Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="header">
+            <h1>Tetris</h1>
+            <div class="theme-selector">
+                <button id="theme1" class="theme-btn active">Classic</button>
+                <button id="theme2" class="theme-btn">Neon</button>
+                <button id="theme3" class="theme-btn">Retro</button>
+            </div>
+        </div>
+
+        <div class="game-area">
+            <div class="game-info">
+                <div class="score-container">
+                    <p>Score: <span id="score">0</span></p>
+                    <p>High Score: <span id="highScore">0</span></p>
+                    <p>Level: <span id="level">1</span></p>
+                    <p>Lines: <span id="lines">0</span></p>
+                </div>
+                <div class="next-piece">
+                    <h3>Next Piece</h3>
+                    <canvas id="nextCanvas" width="120" height="120"></canvas>
+                </div>
+            </div>
+
+            <canvas id="gameCanvas" width="300" height="600"></canvas>
+        </div>
+
+        <div class="controls">
+            <button id="startButton">Start Game</button>
+            <button id="pauseButton">Pause</button>
+            <div class="instructions">
+                <p>Controls:</p>
+                <p>← → : Move</p>
+                <p>↑ : Rotate</p>
+                <p>↓ : Soft Drop</p>
+                <p>Space : Hard Drop</p>
+            </div>
+        </div>
+
+        <div class="leaderboard">
+            <h2>Leaderboard</h2>
+            <div id="leaderboardList"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 

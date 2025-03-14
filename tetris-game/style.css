@@ -1,0 +1,233 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #333;
+}
+
+.game-container {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 800px;
+    width: 95%;
+}
+
+.header {
+    margin-bottom: 1.5rem;
+}
+
+h1 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+}
+
+.theme-selector {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.theme-btn {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    background-color: #ecf0f1;
+    color: #2c3e50;
+    transition: all 0.3s ease;
+}
+
+.theme-btn.active {
+    background-color: #3498db;
+    color: white;
+}
+
+.game-area {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.game-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.score-container p {
+    margin: 0.5rem 0;
+    font-size: 1.2rem;
+    color: #2c3e50;
+}
+
+.next-piece {
+    background-color: #f8f9fa;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.next-piece h3 {
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+}
+
+#gameCanvas {
+    border: 2px solid #2c3e50;
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+#nextCanvas {
+    border: 2px solid #2c3e50;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+button {
+    background-color: #2ecc71;
+    color: white;
+    border: none;
+    padding: 0.8rem 2rem;
+    font-size: 1.1rem;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #27ae60;
+}
+
+#pauseButton {
+    background-color: #e74c3c;
+}
+
+#pauseButton:hover {
+    background-color: #c0392b;
+}
+
+.instructions {
+    text-align: left;
+    background-color: #f8f9fa;
+    padding: 1rem;
+    border-radius: 10px;
+    margin-top: 1rem;
+}
+
+.instructions p {
+    margin: 0.5rem 0;
+    color: #2c3e50;
+}
+
+.leaderboard {
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid #ecf0f1;
+}
+
+.leaderboard h2 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+#leaderboardList {
+    max-height: 150px;
+    overflow-y: auto;
+    text-align: left;
+    background-color: #f8f9fa;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+/* Theme-specific styles */
+body.theme-neon {
+    background-color: #0a0a2a;
+    color: #fff;
+}
+
+body.theme-neon .game-container {
+    background-color: #1a1a3a;
+    box-shadow: 0 0 30px rgba(0, 255, 255, 0.2);
+}
+
+body.theme-neon h1,
+body.theme-neon .score-container p,
+body.theme-neon .next-piece h3,
+body.theme-neon .leaderboard h2 {
+    color: #fff;
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+}
+
+body.theme-neon .theme-btn {
+    background-color: #2a2a4a;
+    color: #fff;
+}
+
+body.theme-neon .theme-btn.active {
+    background-color: #00ffff;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+}
+
+body.theme-neon .next-piece,
+body.theme-neon .instructions,
+body.theme-neon #leaderboardList {
+    background-color: #2a2a4a;
+}
+
+body.theme-retro {
+    background-color: #2c3e50;
+    color: #fff;
+}
+
+body.theme-retro .game-container {
+    background-color: #34495e;
+    box-shadow: 0 0 30px rgba(255, 165, 0, 0.2);
+}
+
+body.theme-retro h1,
+body.theme-retro .score-container p,
+body.theme-retro .next-piece h3,
+body.theme-retro .leaderboard h2 {
+    color: #fff;
+    text-shadow: 2px 2px 0 #000;
+}
+
+body.theme-retro .theme-btn {
+    background-color: #95a5a6;
+    color: #fff;
+}
+
+body.theme-retro .theme-btn.active {
+    background-color: #f39c12;
+}
+
+body.theme-retro .next-piece,
+body.theme-retro .instructions,
+body.theme-retro #leaderboardList {
+    background-color: #2c3e50;
+    border: 2px solid #95a5a6;
+} 
